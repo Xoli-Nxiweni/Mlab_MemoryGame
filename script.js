@@ -7,10 +7,10 @@ let shuffle_letters = letters.sort(() =>{
        return -1
     }
 });
-letters.forEach(letter =>{
+for(let i = 0; i < letters.length; i++){
     let card = document.createElement('div');
     card.className = 'gameCard';
-    card.innerHTML = letter;
+    card.innerHTML = shuffle_letters[i];
     let cards = document.querySelector('.cards');
 
     card.onclick = () =>{
@@ -39,4 +39,4 @@ letters.forEach(letter =>{
         }, 1000)
     }
     cards.appendChild(card);
-});
+}
